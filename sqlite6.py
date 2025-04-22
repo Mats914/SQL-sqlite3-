@@ -8,16 +8,11 @@ cur = db.cursor()
 cur.execute("SELECT * FROM movie")
 
 
-#cur.execute("SELECT title FROM movie")
-#cur.execute("SELECT year FROM movie")
-#cur.execute("SELECT genre FROM movie")
 
 # Iterate through the fetched data and print each row
 for row in cur.fetchall():
-    print(row)
+    print(row[0])
 
 # Close the connection to the database
 db.close()
-
-
 
